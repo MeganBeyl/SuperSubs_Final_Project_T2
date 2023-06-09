@@ -102,9 +102,19 @@ orderDisplay = () => {
         let addOns = subOrder[i].subAddOns;
         let amount = subOrder[i].subAmount;
 
-        overallTotal = 0;
+        overallTotal += amount;
 
-        area.innerHTML = 
+        area.innerHTML +=`
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <p class="card-text"><strong>Base:</strong> ${base}</p>
+                    <p class="card-text"><strong>Size:</strong> ${size}</p>
+                    <p class="card-text"><strong>Toppings:</strong> ${toppings}</p>
+                    <p class="card-text"><strong>Cost:</strong> R${price}.00</p>
+                </div>
+            </div>`
 
+        total.innerHTML = "R" + overallTotal + ".00"
     }
 }
