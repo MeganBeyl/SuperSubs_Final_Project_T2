@@ -20,18 +20,21 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">SuperSubs</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Build A Sub <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="../pages/checkout.html">Checkout</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,71 +58,244 @@
       </div>
     </nav>
 
-    <div class="col-6">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-6">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
-    </div>
-
     <div class="row">
-      <div class="sign-up-space"></div>
-      <div class="col-6">
-          <div class="form-sign-up">
-              <h1>Sign Up</h1>
-              <form id="signUpForm">
-                  <p>If you would like to register for one of our courses, use the form below</p>
-                  <input type="text" class="form-control" placeholder="Name & Surname" id="name">
-                  <input type="text" class="form-control" placeholder="Enter Email" id="email">
+      
+      <div class="card border-success mb-3" style="max-width: 18rem;">
+          <div class="card-header">Hello There!</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">Are you interested in supporting our online store?</h5>
+            <p class="card-text">If you are.. That's WONDERFUL! Please go and rate our app on the AppStore, or leave a comment on our reviews!</p>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="row" id="orderForm">
+      
+      <div class="col-3">
+          <div class="form-build">
+              <h1>BUILD A SUB</h1>
+              <form id="buildSubForm">
+                  <p>Please type in your order here</p>
+                  <input type="text" class="form-control" placeholder="Sub Name" id="name">
                   
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                     <label class="form-check-label" for="exampleRadios1">
-                      Default radio
+                      Small
                     </label>
                   </div>
 
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                     <label class="form-check-label" for="exampleRadios2">
-                      Second default radio
+                      Medium
                     </label>
                   </div>
 
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Large
+                    </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Extra Large
+                    </label>
+                  </div>
+
+                  <div class="bread-section">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Brown bread
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Brown bread
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Brown bread
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Brown bread
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Brown bread
+                      </label>
+                  </div>
+                  </div>
+                 
+
+                  <div class="sauce-section">
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Sauce 1</label>
+                    </div>
+                  </div>
+                  
+                  <div class="add-ons">
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="cheese">
+                      <label class="form-check-label" for="exampleCheck1">Cheese</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="extraCheese">
+                      <label class="form-check-label" for="exampleCheck1">Extra Cheese</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="bacon">
+                      <label class="form-check-label" for="exampleCheck1">Bacon</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="chives">
+                      <label class="form-check-label" for="exampleCheck1">Chives</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="gherkin">
+                      <label class="form-check-label" for="exampleCheck1">Gherkin</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="ham">
+                      <label class="form-check-label" for="exampleCheck1">Ham</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="chillies">
+                      <label class="form-check-label" for="exampleCheck1">Chillies</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="pineaplle">
+                      <label class="form-check-label" for="exampleCheck1">Pineapple</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="tomato">
+                      <label class="form-check-label" for="exampleCheck1">Tomato</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="greenPepper">
+                      <label class="form-check-label" for="exampleCheck1">Green Pepper</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="anchovies">
+                      <label class="form-check-label" for="exampleCheck1">Anchovies</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="feta">
+                      <label class="form-check-label" for="exampleCheck1">Feta</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="avocado">
+                      <label class="form-check-label" for="exampleCheck1">Avocado</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="lettuce">
+                      <label class="form-check-label" for="exampleCheck1">Lettuce</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="steak">
+                      <label class="form-check-label" for="exampleCheck1">Steak Strips</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="banana">
+                      <label class="form-check-label" for="exampleCheck1">Banana</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="broccoli">
+                      <label class="form-check-label" for="exampleCheck1">Broccoli</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="onion">
+                      <label class="form-check-label" for="exampleCheck1">Onion</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="spicy">
+                      <label class="form-check-label" for="exampleCheck1">Spicy Ham</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="halloumi">
+                      <label class="form-check-label" for="exampleCheck1">Halloumi Strips</label>
+                    </div>
+                  </div>
                   
 
-                  <input type="text" class="form-control" placeholder="Password" id="password">
-
-                  <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Send Me Spam Newsletters</label>
-
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Send Me Spam Newsletters</label>
-
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Send Me Spam Newsletters</label>
-
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Send Me Spam Newsletters</label>
-                  </div>
+                  
       
 
                   <button class="btn btn-primary" type="submit" onclick="buildSub()">Build Sub</button>
