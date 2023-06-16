@@ -75,38 +75,43 @@
       <div class="col-5">
           <div class="form-build">
               <h1>BUILD A SUB</h1>
-              <form id="buildSubForm">
+              <form id="buildSubForm" onchange="realCost()">
                   <p>Please type in your order here</p>
                   <input type="text" class="form-control" placeholder="Sub Name" id="subname">
                   
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sizeRadio" id="small" value="small" data-cost="20" checked>
-                    <label class="form-check-label" for="small">
-                      Small
-                    </label>
-                  </div>
+                  <div class="size-options">
 
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sizeRadio" id="medium" value="medium" data-cost="25">
-                    <label class="form-check-label" for="medium">
-                      Medium
-                    </label>
-                  </div>
+                    <h3>Size Options</h3>
+                    
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sizeRadio" id="small" value="small" data-cost="20" checked>
+                      <label class="form-check-label" for="small">
+                        Small
+                      </label>
+                    </div>
 
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sizeRadio" id="large" value="large" data-cost="40">
-                    <label class="form-check-label" for="large">
-                      Large
-                    </label>
-                  </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sizeRadio" id="medium" value="medium" data-cost="25">
+                      <label class="form-check-label" for="medium">
+                        Medium
+                      </label>
+                    </div>
 
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sizeRadio" id="extraLarge" value="extraLarge" data-cost="45">
-                    <label class="form-check-label" for="extraLarge">
-                      Extra Large
-                    </label>
-                  </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sizeRadio" id="large" value="large" data-cost="40">
+                      <label class="form-check-label" for="large">
+                        Large
+                      </label>
+                    </div>
 
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sizeRadio" id="extraLarge" value="extraLarge" data-cost="45">
+                      <label class="form-check-label" for="extraLarge">
+                        Extra Large
+                      </label>
+                    </div>
+                  </div>
+                
                   <div class="bread-section">
                     <div class="form-group">
                       <label for="exampleFormControlSelect1"></label>
