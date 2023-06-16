@@ -11,6 +11,14 @@ html,body,h3,h1{
     color:white;
 }
 
+.col-5{
+    width:100%;
+    height:650px;
+    background-color: lightblue;
+    margin-left: 6%;
+}
+
+
 .col-4{
     height: 400px;
     margin:15px;
@@ -21,8 +29,12 @@ html,body,h3,h1{
 
 }
 
+.card{
+    margin: 3%;
+}
+
 form{
-    width:60%;
+    width:90%;
     height:250px;
     text-align:center;
 }
@@ -31,11 +43,12 @@ form{
     width:100%;
     height:300px;
     margin:10px;
-    
+    text-align:center;
+    margin: 10px;
 }
 
 .size-options{
-    width:40%;
+    width:70%;
     height:100px;
     margin-top: 20px;
     padding-left: 20px;
@@ -43,10 +56,25 @@ form{
 }
 
 .sauce-section{
-
+    width: 50%;
+    float:left;
+    margin-top:80px;
+    float:left;
 }
 
-.add-ons{}
+.add-ons{
+    width:45%;
+    margin-top: 80px;
+    float:left;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.bread-section{
+    width:100%;
+    height:100px;
+    margin:5px;
+}
 
 .checkout{
     width: 65%;
