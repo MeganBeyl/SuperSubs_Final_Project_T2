@@ -140,5 +140,5 @@ realPay = () => {
 checkOut = () => {
     let data = JSON.stringify(subOrder)
     localStorage.setItem('send', subOrder)
-    window.location.href = 'checkout.html';
+    window.location.href = 'pages/checkout.html';
 }
