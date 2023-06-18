@@ -13,8 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <script src="../js/index.js"></script>
     <script src="../js/data.js"></script>
+    <script src="../js/index.js"></script>
+    
 
     <title>Final Project Term 2: SuperSubs</title>
   </head>
@@ -75,7 +76,7 @@
       <div class="col-5">
           <div class="form-build">
               <h1>BUILD A SUB</h1>
-              <form id="buildSubForm" onchange="realCost()">
+              <form id="buildSubForm" onchange="realPay()">
                   <p>Please type in your order here</p>
                   <input type="text" class="form-control" placeholder="Sub Name" id="subname">
                   
@@ -197,108 +198,151 @@
                   
                   <div class="add-ons">
                     <h4>Toppings</h4>
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="cheese" name="add-ons" value="cheese" data-cost="10">
-                      <label class="form-check-label" for="cheese">Cheese</label>
-                    </div>
+                    <ul>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="cheese" name="add-ons" value="cheese" data-cost="10">
+                          <label class="form-check-label" for="cheese">Cheese</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="extraCheese" name="add-ons" value="extraCheese" data-cost="14">
-                      <label class="form-check-label" for="extraCheese">Extra Cheese</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="extraCheese" name="add-ons" value="extraCheese" data-cost="14">
+                          <label class="form-check-label" for="extraCheese">Extra Cheese</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="bacon" name="add-ons" value="bacon" data-cost="10">
-                      <label class="form-check-label" for="bacon">Bacon</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="bacon" name="add-ons" value="bacon" data-cost="10">
+                          <label class="form-check-label" for="bacon">Bacon</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="chives" name="add-ons" value="chives" data-cost="12">
-                      <label class="form-check-label" for="chives">Chives</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="chives" name="add-ons" value="chives" data-cost="12">
+                          <label class="form-check-label" for="chives">Chives</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="gherkin" name="add-ons" value="gherkin" data-cost="9">
-                      <label class="form-check-label" for="gherkin">Gherkin</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="gherkin" name="add-ons" value="gherkin" data-cost="9">
+                          <label class="form-check-label" for="gherkin">Gherkin</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="ham" name="add-ons" value="ham" data-cost="17">
-                      <label class="form-check-label" for="ham">Ham</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="ham" name="add-ons" value="ham" data-cost="17">
+                          <label class="form-check-label" for="ham">Ham</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="chillies" name="add-ons" value="chillies" data-cost="10">
-                      <label class="form-check-label" for="chillies">Chillies</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="chillies" name="add-ons" value="chillies" data-cost="10">
+                          <label class="form-check-label" for="chillies">Chillies</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="pineaplle" name="add-ons" value="pineapple" data-cost="16">
-                      <label class="form-check-label" for="pineapple">Pineapple</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="pineaplle" name="add-ons" value="pineapple" data-cost="16">
+                          <label class="form-check-label" for="pineapple">Pineapple</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="tomato" name="add-ons" value="tomato" data-cost="15">
-                      <label class="form-check-label" for="tomato">Tomato</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="tomato" name="add-ons" value="tomato" data-cost="15">
+                          <label class="form-check-label" for="tomato">Tomato</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="greenPepper" name="add-ons" value="greenPepper" data-cost="10">
-                      <label class="form-check-label" for="greenPepper">Green Pepper</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="greenPepper" name="add-ons" value="greenPepper" data-cost="10">
+                          <label class="form-check-label" for="greenPepper">Green Pepper</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="anchovies" name="add-ons" value="anchovies" data-cost="19">
-                      <label class="form-check-label" for="anchovies">Anchovies</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="anchovies" name="add-ons" value="anchovies" data-cost="19">
+                          <label class="form-check-label" for="anchovies">Anchovies</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="feta" name="add-ons" value="feta" data-cost="18">
-                      <label class="form-check-label" for="feta">Feta</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="feta" name="add-ons" value="feta" data-cost="18">
+                          <label class="form-check-label" for="feta">Feta</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="avocado" name="add-ons" value="avocado" data-cost="35">
-                      <label class="form-check-label" for="avocado">Avocado</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="avocado" name="add-ons" value="avocado" data-cost="35">
+                          <label class="form-check-label" for="avocado">Avocado</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="lettuce" name="add-ons" value="lettuce" data-cost="17">
-                      <label class="form-check-label" for="lettuce">Lettuce</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="lettuce" name="add-ons" value="lettuce" data-cost="17">
+                          <label class="form-check-label" for="lettuce">Lettuce</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="steak" name="add-ons" value="steak" data-cost="20">
-                      <label class="form-check-label" for="steak">Steak Strips</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="steak" name="add-ons" value="steak" data-cost="20">
+                          <label class="form-check-label" for="steak">Steak Strips</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="banana" name="add-ons" value="banana" data-cost="16">
-                      <label class="form-check-label" for="banana">Banana</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="banana" name="add-ons" value="banana" data-cost="16">
+                          <label class="form-check-label" for="banana">Banana</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="broccoli" name="add-ons" value="broccoli" data-cost="10">
-                      <label class="form-check-label" for="broccoli">Broccoli</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="broccoli" name="add-ons" value="broccoli" data-cost="10">
+                          <label class="form-check-label" for="broccoli">Broccoli</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="onion" name="add-ons" value="onion" data-cost="9">
-                      <label class="form-check-label" for="onion">Onion</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="onion" name="add-ons" value="onion" data-cost="9">
+                          <label class="form-check-label" for="onion">Onion</label>
+                        </div>
+                      </li>
 
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="spicy" name="add-ons" value="spicy" data-cost="15">
-                      <label class="form-check-label" for="spicy">Spicy Ham</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" id="halloumi" name="add-ons" value="halloumi" data-cost="26">
-                      <label class="form-check-label" for="halloumi">Halloumi Strips</label>
-                    </div>
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="spicy" name="add-ons" value="spicy" data-cost="15">
+                          <label class="form-check-label" for="spicy">Spicy Ham</label>
+                        </div>
+                      </li>
+                      
+                      <li>
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input" id="halloumi" name="add-ons" value="halloumi" data-cost="26">
+                          <label class="form-check-label" for="halloumi">Halloumi Strips</label>
+                        </div>
+                      </li>
+                    </ul>
+                    
                   </div>
 
-                  <button class="btn btn-primary" type="button" onclick="buildSub(); orderDisplay() ">Build Sub</button>
+                  <button class="btn btn-primary" type="button" onclick="buildSub()">Build Sub</button>
 
               </form>
 
