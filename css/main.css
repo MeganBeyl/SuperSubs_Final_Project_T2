@@ -3,6 +3,10 @@ html,body,h3,h1{
     padding:0;
 }
 
+nav{
+    background-color: darkseagreen;
+}
+
 form ul{
     list-style: none;
 }
@@ -26,7 +30,7 @@ form li{
 .col-5{
     width:100%;
     height:650px;
-    background-color: lightblue;
+    background-color: rgb(114, 189, 114);
     margin-left: 6%;
 }
 
@@ -129,4 +133,26 @@ footer p{
     background-color: black;
     color:white;
     cursor:pointer;
+}
+
+.outPut{
+    margin-left: 50px;
+}
+
+.checkOut{
+    width:50%;
+    
+}
+
+.rightCheck{
+    width: 30%;
+    height: 350px;
+    text-align:center;
+    background-color: darkseagreen;
+    float:right;
+    padding-top: 50px;
+}
+
+.rightCheck button{
+    margin: 20px;
 }
