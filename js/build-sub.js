@@ -56,7 +56,7 @@ buildSub = () => {
         subName: subName,
         subSize: size,
         subSauce: sauceOption,
-        subAddOns: topArray,
+        subAddOns: addOns,
         subPrice: subTotal
     });
 
@@ -66,44 +66,48 @@ buildSub = () => {
     document.getElementById("subForm").reset();
 
 
-    orderDisplay = () => {
-        let area = document.getElementById("subOrder");
-        let total = document.getElementById("orderAmount");
-    
-        area.innerHTML = ""
+    orderDisplay()
+}
 
-        let overallAmount = 0;
-    
-        for(let i = 0; i < subOrder.length; i++){
-            let name = subOrder[i].subName;
-            let size = subOrder[i].subSize;
-            let bread = subOrder[i].subBread;
-            let addOns = subOrder[i].subAddOns;
-            let amount = subOrder[i].subAmount;
-    
-            overallAmount += amount;
-    
-            area.innerHTML +=`
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${name}</h5>
-                        <p class="card-text"><strong>Bread:</strong> ${bread}</p>
-                        <p class="card-text"><strong>Size:</strong> ${size}</p>
-                        <p class="card-text"><strong>Toppings:</strong> ${addOns}</p>
-                        <p class="card-text"><strong>Cost:</strong> R${amount}.00</p>
-                    </div>
-                </div>`
-    
-            total.innerHTML = "R" + overallAmount + ".00"
-        }
+orderDisplay = () => {
+    let area = document.getElementById("subOrder");
+    let total = document.getElementById("orderAmount");
 
-        document.getElementById("subForm").reset();
+    area.innerHTML = ""
+
+    let overallAmount = 0;
+
+    for(let i = 0; i < subOrder.length; i++){
+        let name = subOrder[i].subName;
+        let size = subOrder[i].subSize;
+        let sauce = subOrder[i].subSauce;
+        let bread = subOrder[i].subBread;
+        let addOns = subOrder[i].subAddOns;
+        let amount = subOrder[i].subAmount;
+
+        overallAmount += amount;
+
+        area.innerHTML +=`
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <p class="card-text"><strong>Bread:</strong> ${bread}</p>
+                    <p class="card-text"><strong>Size:</strong> ${size}</p>
+                    <p class="card-text"><strong>Sauce:</strong> ${sauce}</p>
+                    <p class="card-text"><strong>Toppings:</strong> ${addOns}</p>
+                    <p class="card-text"><strong>Cost:</strong> R${amount}.00</p>
+                </div>
+            </div>`
+
+        total.innerHTML = "R" + overallAmount + ".00"
     }
+
+    document.getElementById("subForm").reset();
 }
 
 realPay = () => {
 
-    realPrice = 0;
+    let realPrice = 0;
 
     let size = document.getElementById("size").value;
     for(let i = 0; i < size.length; i++){
@@ -111,7 +115,6 @@ realPay = () => {
             realPrice = realPrice + size[i].dataset.cost
         }
     }
-   
 
     let breadOption = document.getElementsByName("breadOption");
     if(breadOption === "Brown Bread"){
@@ -126,7 +129,7 @@ realPay = () => {
         realPrice = realPrice + 15;
     }
 
-    let sauce = document.getElementByName("sauce");
+    let sauceOption = document.getElementByName("sauce");
     for(let i = 0; i < sauceArray.length; i++){
         if(sauceArray[i].checked){
             realPrice = realPrice + sauceArray[i].dataset.cost

@@ -22,6 +22,7 @@ checkOutDisplay = () => {
             <p>Name: ${name}</p>
             <p>Sub Size: ${size}</p>
             <p>Sub Bread: ${bread}</p>
+            <p>Sub Sauce: ${sauce}</p>
             <p>Sub Add Ons: ${addOns.join(', ')}</p>
             <p>Sub Price: R${amount}.00</p>
         </div>
@@ -32,7 +33,11 @@ checkOutDisplay = () => {
     }
 }
 
+addDiscount = () => {
+    
+}
+
 resetBack = () => {
-    localStorage.removeItem('subOrder');
+    localStorage.removeItem('order');
     window.location.href = '../index.html'
 }
