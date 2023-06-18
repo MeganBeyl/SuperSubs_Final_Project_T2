@@ -81,20 +81,20 @@ buildSub = () => {
             let addOns = subOrder[i].subAddOns;
             let amount = subOrder[i].subAmount;
     
-            overallTotal += amount;
+            overallAmount += amount;
     
             area.innerHTML +=`
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>
-                        <p class="card-text"><strong>Base:</strong> ${base}</p>
+                        <p class="card-text"><strong>Bread:</strong> ${bread}</p>
                         <p class="card-text"><strong>Size:</strong> ${size}</p>
-                        <p class="card-text"><strong>Toppings:</strong> ${toppings}</p>
-                        <p class="card-text"><strong>Cost:</strong> R${price}.00</p>
+                        <p class="card-text"><strong>Toppings:</strong> ${addOns}</p>
+                        <p class="card-text"><strong>Cost:</strong> R${amount}.00</p>
                     </div>
                 </div>`
     
-            total.innerHTML = "R" + overallTotal + ".00"
+            total.innerHTML = "R" + overallAmount + ".00"
         }
 
         document.getElementById("subForm").reset();
@@ -106,21 +106,30 @@ realPay = () => {
     realPrice = 0;
 
     let size = document.getElementById("size").value;
+    for(let i = 0; i < size.length; i++){
+        if(size[i].checked){
+            realPrice = realPrice + size[i].dataset.cost
+        }
+    }
+   
 
-    if(size === "Small"){
-        realPrice = realPrice + 20;
-    } else if(size === "Medium"){
+    let breadOption = document.getElementsByName("breadOption");
+    if(breadOption === "Brown Bread"){
         realPrice = realPrice + 25;
-    } else if(size === "Large"){
-        realPrice = realPrice + 40;
-    } else if(size === "Extra Large"){
-        realPrice = realPrice + 45;
+    } else if(breadOption === "White Bread"){
+        realPrice = realPrice + 20;
+    } else if(breadOption === "Rye Bread"){
+        realPrice = realPrice + 30;
+    } else if(breadOption === "Full Grain Bread"){
+        realPrice = realPrice + 34;
+    } else if(breadOption === "Pita Bread"){
+        realPrice = realPrice + 15;
     }
 
-    let breadOption = document.getElementsByName("breadRadio");
-    for(let i = 0; i< breadOption.length; i++){
-        if(breadOption[i].checked){
-            realPrice = realPrice + breadOption[i].dataset.cost
+    let sauce = document.getElementByName("sauce");
+    for(let i = 0; i < sauceArray.length; i++){
+        if(sauceArray[i].checked){
+            realPrice = realPrice + sauceArray[i].dataset.cost
         }
     }
 
@@ -131,14 +140,12 @@ realPay = () => {
         }
     }
 
-
-
     document.getElementById("realPay").innerHTML = "R" + realPrice + ".00"
 
 }
 
 checkOut = () => {
     let data = JSON.stringify(subOrder)
-    localStorage.setItem('send', subOrder)
-    window.location.href = 'pages/checkout.html';
+    localStorage.setItem('order', data)
+    window.location.href = '../pages/checkout.html';
 }
