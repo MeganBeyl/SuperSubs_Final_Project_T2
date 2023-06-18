@@ -5,26 +5,34 @@ buildSub = () => {
     let subTotal = 0;
 
     let subName = document.getElementById("subName").value;
+    
+    // Get Radio Options
     let size = "";
     if (document.getElementById("small").checked){
         size = "small";
-    } else if (document.getElementById("medium")){
+    } else if (document.getElementById("medium").checked){
         size = "medium";
-    } else if(document.getElementById("large")){
+    } else if(document.getElementById("large").checked){
         size = "large";
-    } else if(document.getElementById("extraLarge")){
+    } else if(document.getElementById("extraLarge").checked){
         size = "extra Large";
     }
 
-        // Get Radio Options
-    let breadOption = document.getElementById("breadRadio");
-    let breadVal;
-    for(let i = 0; i < breadOption.length; i++){
-        if(baseOption[i].checked){
-            breadVal = breadOption[i].value
-            subTotal = subTotal + breadOption[i].dataset.cost
-        }
+        
+    let breadOption = document.getElementById("breadOption");
+
+    if(breadOption === "Brown Bread"){
+        subTotal = subTotal + 25;
+    } else if(breadOption === "White Bread"){
+        subTotal = subTotal + 20;
+    } else if(breadOption === "Rye Bread"){
+        subTotal = subTotal + 30;
+    } else if(breadOption === "Full Grain Bread"){
+        subTotal = subTotal + 34;
+    } else if(breadOption === "Pita Bread"){
+        subTotal = subtotal + 15;
     }
+    
 
     let sauceOption = document.getElementById("sauce");
     let sauceArray;
@@ -93,8 +101,44 @@ buildSub = () => {
     }
 }
 
+realPay = () => {
+
+    realPrice = 0;
+
+    let size = document.getElementById("size").value;
+
+    if(size === "Small"){
+        realPrice = realPrice + 20;
+    } else if(size === "Medium"){
+        realPrice = realPrice + 25;
+    } else if(size === "Large"){
+        realPrice = realPrice + 40;
+    } else if(size === "Extra Large"){
+        realPrice = realPrice + 45;
+    }
+
+    let breadOption = document.getElementsByName("breadRadio");
+    for(let i = 0; i< breadOption.length; i++){
+        if(breadOption[i].checked){
+            realPrice = realPrice + breadOption[i].dataset.cost
+        }
+    }
+
+    let addOnsOptions = document.getElementsByName("add-ons");
+    for(let i = 0; i < addOnsOptions.length; i++){
+        if(addOnsOptions[i].checked){
+            realPrice = realPrice + addOnsOptions[i].dataset.cost
+        }
+    }
+
+
+
+    document.getElementById("realPay").innerHTML = "R" + realPrice + ".00"
+
+}
+
 checkOut = () => {
     let data = JSON.stringify(subOrder)
     localStorage.setItem('send', subOrder)
-    window.location.href = 'pages/checkout.html';
+    window.location.href = 'checkout.html';
 }
