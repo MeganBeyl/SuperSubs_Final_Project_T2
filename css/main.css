@@ -3,6 +3,18 @@ html,body,h3,h1{
     padding:0;
 }
 
+form ul{
+    list-style: none;
+}
+
+form li{
+    float:left;
+}
+
+.form-inline{
+    float: right;
+}
+
 .col-6{
     width: 90%;
     text-align:center;
