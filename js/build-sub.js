@@ -109,14 +109,14 @@ realPay = () => {
 
     let realPrice = 0;
 
-    let size = document.getElementById("size").value;
+    let size = document.getElementsByName("sizeRadio").value;
     for(let i = 0; i < size.length; i++){
         if(size[i].checked){
             realPrice = realPrice + size[i].dataset.cost
         }
     }
 
-    let breadOption = document.getElementsByName("breadOption");
+    let breadOption = document.getElementsById("breadOption");
     if(breadOption === "Brown Bread"){
         realPrice = realPrice + 25;
     } else if(breadOption === "White Bread"){
@@ -129,10 +129,10 @@ realPay = () => {
         realPrice = realPrice + 15;
     }
 
-    let sauceOption = document.getElementByName("sauce");
+    let sauceOption = document.getElementsByName("sauce");
     for(let i = 0; i < sauceArray.length; i++){
-        if(sauceArray[i].checked){
-            realPrice = realPrice + sauceArray[i].dataset.cost
+        if(sauceOption[i].checked){
+            realPrice = realPrice + sauceOption[i].dataset.cost
         }
     }
 
