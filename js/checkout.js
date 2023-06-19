@@ -1,6 +1,6 @@
 checkOutDisplay = () => {
 
-    let data = JSON.parse(localStorage.getItem('subOrder'));
+    let data = JSON.parse(localStorage.getItem('order'));
     let items = document.getElementById('checkOrder');
     let totalArea = document.getElementById('totalCheck');
 
@@ -10,6 +10,7 @@ checkOutDisplay = () => {
 
         let name = data[i].subName;
         let size = data[i].subSize;
+        let sauce = data[i].subSauce;
         let bread = data[i].subBread;
         let addOns = data[i].subAddOns;
         let amount = data[i].subAmount;
