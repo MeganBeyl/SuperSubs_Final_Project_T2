@@ -6,20 +6,30 @@ buildSub = () => {
 
     let subName = document.getElementById("subName").value;
     
-    // Get Radio Options
-    let size = "";
-    if (document.getElementById("small").checked){
-        size = "small";
-    } else if (document.getElementById("medium").checked){
-        size = "medium";
-    } else if(document.getElementById("large").checked){
-        size = "large";
-    } else if(document.getElementById("extraLarge").checked){
-        size = "extra Large";
+    
+    let size = document.getElementsByName("sizeRadio");
+    let sizeValue;
+    for(let i = 0; i < size.length;i++){
+        if(size[i].checked){
+            sizeValue = size[i].value
+            subTotal = subTotal + +size[i].dataset.cost
+        }
     }
 
+    // Get Radio Options
+    //let size= "";
+    //if (document.getElementById("small").checked){
+    //  size = "small";
+    //} else if (document.getElementById("medium").checked){
+    //    size = "medium";
+    //} else if(document.getElementById("large").checked){
+    //    size = "large";
+    //} else if(document.getElementById("extraLarge").checked){
+    //    size = "extra Large";
+    //}
+
         
-    let breadOption = document.getElementById("breadOption");
+    let breadOption = document.getElementById("breadOption").value;
 
     if(breadOption === "Brown Bread"){
         subTotal = subTotal + 25;
@@ -34,12 +44,12 @@ buildSub = () => {
     }
     
 
-    let sauceOption = document.getElementById("sauce");
-    let sauceArray;
-    for(let i = 1; i < sauceOption.length; i++){
+    let sauceOption = document.getElementsByName("sauce");
+    let sauceArray = [];
+    for(let i = 0; i < sauceOption.length; i++){
         if(sauceOption[i].checked){
-            sauceArray = sauceOption[i].value
-            subTotal = subTotal + sauceOption[i].dataset.cost
+            sauceArray.push(sauceOption[i].value)
+            subTotal = subTotal + +sauceOption[i].dataset.cost
         } 
     }
 
@@ -54,16 +64,17 @@ buildSub = () => {
 
     subOrder.push({
         subName: subName,
-        subSize: size,
-        subSauce: sauceOption,
-        subAddOns: addOns,
+        subSize: sizeValue,
+        subBread: breadOption,
+        subSauce: sauceArray,
+        subAddOns: toppingArray,
         subPrice: subTotal
     });
 
     console.log(subOrder)
 
     document.getElementById("realPay").innerHTML = "R0.00"
-    document.getElementById("subForm").reset();
+    document.getElementById("buildSubForm").reset();
 
 
     orderDisplay()
@@ -83,7 +94,7 @@ orderDisplay = () => {
         let sauce = subOrder[i].subSauce;
         let bread = subOrder[i].subBread;
         let addOns = subOrder[i].subAddOns;
-        let amount = subOrder[i].subAmount;
+        let amount = subOrder[i].subPrice;
 
         overallAmount += amount;
 
@@ -102,21 +113,21 @@ orderDisplay = () => {
         total.innerHTML = "R" + overallAmount + ".00"
     }
 
-    document.getElementById("subForm").reset();
+    document.getElementById("buildSubForm").reset();
 }
 
 realPay = () => {
 
     let realPrice = 0;
 
-    let size = document.getElementsByName("sizeRadio").value;
+    let size = document.getElementsByName("sizeRadio");
     for(let i = 0; i < size.length; i++){
         if(size[i].checked){
-            realPrice = realPrice + size[i].dataset.cost
+            realPrice = realPrice + +size[i].dataset.cost
         }
     }
 
-    let breadOption = document.getElementsById("breadOption");
+    let breadOption = document.getElementsById("breadOption").value;
     if(breadOption === "Brown Bread"){
         realPrice = realPrice + 25;
     } else if(breadOption === "White Bread"){
@@ -130,16 +141,16 @@ realPay = () => {
     }
 
     let sauceOption = document.getElementsByName("sauce");
-    for(let i = 0; i < sauceArray.length; i++){
+    for(let i = 0; i < sauceOption.length; i++){
         if(sauceOption[i].checked){
-            realPrice = realPrice + sauceOption[i].dataset.cost
+            realPrice = realPrice + +sauceOption[i].dataset.cost
         }
     }
 
     let addOnsOptions = document.getElementsByName("add-ons");
     for(let i = 0; i < addOnsOptions.length; i++){
         if(addOnsOptions[i].checked){
-            realPrice = realPrice + addOnsOptions[i].dataset.cost
+            realPrice = realPrice + +addOnsOptions[i].dataset.cost
         }
     }
 
