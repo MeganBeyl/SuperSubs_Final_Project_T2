@@ -123,7 +123,7 @@ realPay = () => {
     let size = document.getElementsByName("sizeRadio");
     for(let i = 0; i < size.length; i++){
         if(size[i].checked){
-            realPrice = realPrice + +size[i].dataset.cost
+            realPrice = realPrice + size[i].dataset.cost
         }
     }
 
