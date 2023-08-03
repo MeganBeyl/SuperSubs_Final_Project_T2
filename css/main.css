@@ -7,9 +7,18 @@ nav{
     background-color: rgb(102, 162, 102);
 }
 
+.navbar{
+    height: 150px;
+}
+
 .nav-link{
     color:black;
-    
+}
+
+.nav-link:hover{
+    color:white;
+    background-color: darkgreen;
+    border-radius: 25px;
 }
 
 .navbar-brand{
@@ -73,7 +82,7 @@ form li{
 }
 
 form{
-    width:90%;
+    padding-right: 10px;
     height:250px;
     text-align:center;
 }
