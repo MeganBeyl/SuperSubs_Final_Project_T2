@@ -143,14 +143,14 @@ realPay = () => {
     let sauceOption = document.getElementsByName("sauce");
     for(let i = 0; i < sauceOption.length; i++){
         if(sauceOption[i].checked){
-            realPrice = realPrice + +sauceOption[i].dataset.cost
+            realPrice = realPrice + sauceOption[i].dataset.cost
         }
     }
 
     let addOnsOptions = document.getElementsByName("add-ons");
     for(let i = 0; i < addOnsOptions.length; i++){
         if(addOnsOptions[i].checked){
-            realPrice = realPrice + +addOnsOptions[i].dataset.cost
+            realPrice = realPrice + addOnsOptions[i].dataset.cost
         }
     }
 
