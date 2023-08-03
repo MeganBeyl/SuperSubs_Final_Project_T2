@@ -21,42 +21,41 @@
     <title>Final Project Term 2: SuperSubs</title>
   </head>
   <body onload="orderDisplay()">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">SuperSubs</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Build A Sub <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/checkout.html">Checkout</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    <nav class="navbar navbar-expand">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SuperSubs</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/build-a-sub.html">Build A Sub</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Find a Store</a>
+                <a class="dropdown-item" href="#">About Us</a>
+                <div class="dropdown-divider"></div>
+                
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/checkout.html">Checkout</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            
+          </form>
+        </div>
       </div>
     </nav>
 
@@ -134,63 +133,63 @@
                     <ul>
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" name="sauce" id="mayo" value="mayo" data-cost="9">
+                          <input type="checkbox" class="form-check-input" name="sauce" id="mayo" value="Mayo" data-cost="9">
                           <label class="form-check-label" for="mayo">Mayo</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="sweet" name="sauce" value="sweet" data-cost="10">
+                          <input type="checkbox" class="form-check-input" id="sweet" name="sauce" value="Sweet" data-cost="10">
                           <label class="form-check-label" for="sweet">Sweet Chillies</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="tomatoS" name="sauce" value="tomatoS" data-cost="10">
+                          <input type="checkbox" class="form-check-input" id="tomatoS" name="sauce" value="Tomato" data-cost="10">
                           <label class="form-check-label" for="tomatoS">Tomato</label>
                         </div>
                       </li>
 
                       <li> 
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="mustard" name="sauce" value="mustard" data-cost="15">
+                          <input type="checkbox" class="form-check-input" id="mustard" name="sauce" value="Mustard" data-cost="15">
                           <label class="form-check-label" for="mustard">Mustard</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="sweetMustard" name="sauce" value="sweetMustard" data-cost="9">
+                          <input type="checkbox" class="form-check-input" id="sweetMustard" name="sauce" value="Sweet Mustard" data-cost="9">
                           <label class="form-check-label" for="sweetMustard">Sweet Mustard</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="island" name="sauce" value="island" data-cost="15">
+                          <input type="checkbox" class="form-check-input" id="island" name="sauce" value="1000 Island" data-cost="15">
                           <label class="form-check-label" for="island"> 101 Island</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="lemon" name="sauce" value="lemon" data-cost="14">
+                          <input type="checkbox" class="form-check-input" id="lemon" name="sauce" value="Lemon Butter" data-cost="14">
                           <label class="form-check-label" for="lemon">Lemon Butter</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="cheeseChives" name="sauce" value="cheeseChives" data-cost="10">
+                          <input type="checkbox" class="form-check-input" id="cheeseChives" name="sauce" value="Cheese&Chives" data-cost="10">
                           <label class="form-check-label" for="cheeseChives">Cheesy Chives</label>
                         </div>
                       </li>
 
                       <li>
                         <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input" id="bbq" name="sauce" value="bbq" data-cost="9">
+                          <input type="checkbox" class="form-check-input" id="bbq" name="sauce" value="BBQ" data-cost="9">
                           <label class="form-check-label" for="bbq">BBQ</label>
                         </div>
                       </li>
@@ -343,7 +342,7 @@
                     
                   </div>
 
-                  <button class="btn btn-primary" type="button" onclick="buildSub(); orderDisplay()">Build Sub</button>
+                  <button class="btn btn-primary bg-subButton disabled" type="button" onclick="buildSub(); orderDisplay()">Build Sub</button>
                   <div class="rightCost">
                     <div class="orderCost" id="realPay">R0.00</div>
                   </div>

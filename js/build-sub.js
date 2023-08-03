@@ -40,7 +40,7 @@ buildSub = () => {
     } else if(breadOption === "Full Grain Bread"){
         subTotal = subTotal + 34;
     } else if(breadOption === "Pita Bread"){
-        subTotal = subtotal + 15;
+        subTotal = subTotal + 15;
     }
     
 
@@ -58,7 +58,7 @@ buildSub = () => {
     for(let i = 5; i < addOnsOptions.length; i++){
         if(addOnsOptions[i].checked){
             toppingArray.push(addOnsOptions[i].value);
-            subTotal = subTotal + addOnsOptions[i].dataset.cost
+            subTotal = subTotal + +addOnsOptions[i].dataset.cost
         }
     }
 
@@ -159,7 +159,7 @@ realPay = () => {
 }
 
 checkOut = () => {
-    let data = JSON.stringify(subOrder)
-    localStorage.setItem('order', data)
+    let data = JSON.stringify(subOrder);
+    localStorage.setItem('subOrder', data);
     window.location.href = '../pages/checkout.html';
 }

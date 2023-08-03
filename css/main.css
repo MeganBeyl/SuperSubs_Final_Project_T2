@@ -4,7 +4,22 @@ html,body,h3,h1{
 }
 
 nav{
-    background-color: darkseagreen;
+    background-color: rgb(102, 162, 102);
+}
+
+.nav-link{
+    color:black;
+    
+}
+
+.navbar-brand{
+    color:aliceblue;
+    margin: 35px;
+    font-size: x-large;
+}
+
+.navbar.navbar-expand{
+    width: auto;
 }
 
 form ul{
@@ -61,6 +76,10 @@ form{
     width:90%;
     height:250px;
     text-align:center;
+}
+
+.d-flex{
+    width: 30%;
 }
 
 .form-build{
