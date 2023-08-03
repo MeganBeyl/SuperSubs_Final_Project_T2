@@ -62,6 +62,7 @@ buildSub = () => {
         }
     }
 
+
     subOrder.push({
         subName: subName,
         subSize: sizeValue,
@@ -162,6 +163,7 @@ realPay = () => {
     document.getElementById("realPay").innerHTML = "R" + realPrice + ".00"
 
 }
+
 
 checkOut = () => {
     let data = JSON.stringify(subOrder);
