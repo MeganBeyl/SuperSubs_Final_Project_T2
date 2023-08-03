@@ -76,7 +76,6 @@ buildSub = () => {
     document.getElementById("realPay").innerHTML = "R0.00"
     document.getElementById("buildSubForm").reset();
 
-
     orderDisplay()
 }
 
@@ -116,6 +115,12 @@ orderDisplay = () => {
     document.getElementById("buildSubForm").reset();
 }
 
+subValid = () => {
+    if(sauceArray.length >= 1) and (toppingArray.length >= 5);{
+
+    }
+}
+
 realPay = () => {
 
     let realPrice = 0;
@@ -123,7 +128,7 @@ realPay = () => {
     let size = document.getElementsByName("sizeRadio");
     for(let i = 0; i < size.length; i++){
         if(size[i].checked){
-            realPrice = realPrice + size[i].dataset.cost
+            realPrice = realPrice + +size[i].dataset.cost
         }
     }
 
@@ -143,14 +148,14 @@ realPay = () => {
     let sauceOption = document.getElementsByName("sauce");
     for(let i = 0; i < sauceOption.length; i++){
         if(sauceOption[i].checked){
-            realPrice = realPrice + sauceOption[i].dataset.cost
+            realPrice = realPrice + +sauceOption[i].dataset.cost
         }
     }
 
     let addOnsOptions = document.getElementsByName("add-ons");
     for(let i = 0; i < addOnsOptions.length; i++){
         if(addOnsOptions[i].checked){
-            realPrice = realPrice + addOnsOptions[i].dataset.cost
+            realPrice = realPrice + +addOnsOptions[i].dataset.cost
         }
     }
 

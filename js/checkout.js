@@ -13,7 +13,7 @@ checkOutDisplay = () => {
         let bread = data[i].subBread;
         let sauce = data[i].subSauce;
         let addOns = data[i].subAddOns;
-        let amount = data[i].subAmount;
+        let amount = data[i].subPrice;
 
         checkOutTotal += amount;
 
@@ -35,7 +35,24 @@ checkOutDisplay = () => {
 }
 
 addDiscount = () => {
-    
+    let data = JSON.parse(localStorage.getItem('subOrder'))
+    let totalArea = document.getElementById('checkOutTotal')
+    let coupon = document.getElementById("promoCode").value
+
+    let checkOutTotal = 0
+
+    for(let i = 0; i < data.length; i++){
+        let amount = data[i].subPrice
+
+        checkOutTotal += amount
+
+        if(coupon === "0000"){
+            checkOutTotal = checkOutTotal - 5
+            totalArea.innerHTML = "R" + checkOutTotal + ".00"
+        }else {
+            alert("INVALID CODE!")
+        }
+    }
 }
 
 resetBack = () => {
